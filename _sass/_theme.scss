@@ -704,3 +704,37 @@ $form-width: 880px;
   font-weight: 600;
   text-align: center;
 }
+
+
+// ==========================================================
+// Nov 24 edits
+// ==========================================================
+// Full width checkbox pills (community agreements + confirm queer)
+.reg-form .chip-full { display: flex; }
+.chip-full > span { display: block; width: 100%; }
+
+// Where & When box at the top of the registration form
+.reg-venue {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid $light-blue;
+}
+.reg-venue img { width: 100%; border-radius: 10px; object-fit: cover; aspect-ratio: 4 / 3; }
+.reg-venue-info p { margin: 0 0 0.75rem; }
+.reg-venue-info p:last-child { margin-bottom: 0; }
+@media (max-width: $small) {
+  .reg-venue { grid-template-columns: 1fr; }
+}
+
+// Wider content on phones (less empty space on the sides)
+@media (max-width: $small) {
+  .pitch-wrap { padding: 0 0.35rem; }
+  .pitch-content { padding: 0.75rem 0.6rem 1rem; }
+  .card { padding: 1.15rem 1rem; }
+  .reg-form.card { padding: 1.1rem 0.75rem; }
+}

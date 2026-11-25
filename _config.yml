@@ -9,8 +9,8 @@ tagline: "Denver Queer Rec Soccer League"
 description: "Denver's queer recreational soccer league. All skill levels welcome."
 
 # GitHub Pages project site settings
-url: "https://brirowe.github.io"
-baseurl: "/Lipstick-Lovers"   # set to "" if you later use a custom domain
+url: "https://lipstick-lovers.github.io"
+baseurl: ""
 
 # ----- Logo -----
 # Drop your logo in assets/img/ and put the path here.
@@ -28,7 +28,7 @@ art_right: ""
 registration:
   open: false
   button_text: "Register Now"
-  url: "https://brirowe.github.io/Lipstick-Lovers/register/"
+  url: "https://lipstick-lovers.github.io/register-x7k2q9/"   # hidden link, only share it directly
   script_url: ""   # Google Apps Script web app URL (ends in /exec)
 
 # ----- Contact -----

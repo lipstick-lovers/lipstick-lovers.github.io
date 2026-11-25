@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Register
-permalink: /register/
+permalink: /register-x7k2q9/
 art_hero: ""
 ---
 
@@ -19,6 +19,16 @@ art_hero: ""
 
 <form id="reg-form" class="card card-wide reg-form" data-endpoint="{{ site.registration.script_url }}"{% unless site.registration.open %} data-preview="true"{% endunless %}>
 
+  <!-- ===== Where & When ===== -->
+  <div class="reg-venue">
+    <img src="{{ '/assets/img/medinas.png' | relative_url }}" alt="Indoor soccer field at Medina's" loading="lazy">
+    <div class="reg-venue-info">
+      <p><strong data-es="Dónde">Where</strong><br><span data-es="Medina's, fútbol bajo techo en Denver, Colorado">Medina's, indoor soccer in Denver, Colorado</span></p>
+      <p><strong data-es="Cuándo">When</strong><br><span data-es="Domingos, partidos a las 5, 6, 7 u 8 pm">Sundays, games at 5, 6, 7, or 8 pm</span></p>
+      <p class="reg-hint" data-es="Te enviaremos la dirección exacta en Discord después de inscribirte.">We'll send the exact address in Discord after you register.</p>
+    </div>
+  </div>
+
   <!-- ===== Before You Register ===== -->
   <fieldset>
     <legend data-es="Antes de inscribirte">Before You Register</legend>
@@ -30,12 +40,12 @@ art_hero: ""
         <li data-es="{{ a.text_es | default: a.text | escape }}">{{ a.text }}</li>
         {% endfor %}
       </ol>
-      <label class="chip"><input type="checkbox" name="agree_agreements" value="Yes" required><span><span data-es="Acepto los acuerdos de la comunidad de Lipstick Lovers">I agree to the Lipstick Lovers community agreements</span> <span class="req">*</span></span></label>
+      <label class="chip chip-full"><input type="checkbox" name="agree_agreements" value="Yes" required><span><span data-es="Acepto los acuerdos de la comunidad de Lipstick Lovers">I agree to the Lipstick Lovers community agreements</span> <span class="req">*</span></span></label>
     </div>
 
     <div class="reg-q">
       <span data-es="Lipstick Lovers es una liga solo para personas queer. Si no te identificas como queer, por favor no te inscribas.">Lipstick Lovers is a queer only league, if you do not identify as queer please do not register.</span>
-      <label class="chip"><input type="checkbox" name="confirm_queer" value="Yes" required><span><span data-es="Confirmo que soy queer">I confirm I'm queer</span> <span class="req">*</span></span></label>
+      <label class="chip chip-full"><input type="checkbox" name="confirm_queer" value="Yes" required><span><span data-es="Confirmo que soy queer">I confirm I'm queer</span> <span class="req">*</span></span></label>
     </div>
   </fieldset>
 
