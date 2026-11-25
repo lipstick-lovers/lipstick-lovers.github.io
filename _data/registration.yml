@@ -6,7 +6,7 @@
 # ----- Payment -----
 season_cost: 50          # full season price in dollars
 payment_tiers: [0, 50, 100, 150]   # percent of season cost
-venmo_handle: "@username"          # who to send Venmo payments to (PLACEHOLDER)
+venmo_handle: "@Alejandra-Beltran-8"          # who to send Venmo payments to
 cash_note: "Bring cash to your first game."   # shown when someone picks Cash (PLACEHOLDER)
 cash_note_es: "Trae el efectivo a tu primer partido."
 

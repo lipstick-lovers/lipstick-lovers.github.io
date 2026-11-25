@@ -713,23 +713,58 @@ $form-width: 880px;
 .reg-form .chip-full { display: flex; }
 .chip-full > span { display: block; width: 100%; }
 
-// Where & When box at the top of the registration form
-.reg-venue {
+// Where & When section at the top of the registration form
+.venue-photo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+.venue-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+// dark fade at the bottom so the text reads on the photo
+.venue-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 15, 0.9), rgba(10, 10, 15, 0) 55%);
+}
+.venue-photo-label {
+  position: absolute;
+  left: 1.1rem;
+  bottom: 0.9rem;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  align-items: center;
-  padding: 1rem;
+  gap: 0.1rem;
+}
+.venue-name { @include rainbow-text; font-size: clamp(1.6rem, 6vw, 2.2rem); font-weight: 800; line-height: 1.1; }
+.venue-city { color: $text; font-weight: 600; font-size: 0.95rem; }
+
+.venue-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: $small) {
+  .venue-cards { grid-template-columns: 1fr; }
+}
+.venue-card {
+  --c: #{$pink};
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+  padding: 1rem 1.1rem;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid $light-blue;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-left: 4px solid var(--c);
 }
-.reg-venue img { width: 100%; border-radius: 10px; object-fit: cover; aspect-ratio: 4 / 3; }
-.reg-venue-info p { margin: 0 0 0.75rem; }
-.reg-venue-info p:last-child { margin-bottom: 0; }
-@media (max-width: $small) {
-  .reg-venue { grid-template-columns: 1fr; }
+.venue-label { color: var(--c); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.venue-value { font-size: 1.2rem; font-weight: 700; }
+.venue-times { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.35rem; }
+.venue-times span {
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
+.venue-note { margin: 0; text-align: center; color: $muted; font-size: 0.92rem; }
 
 // Wider content on phones (less empty space on the sides)
 @media (max-width: $small) {

@@ -20,14 +20,33 @@ art_hero: ""
 <form id="reg-form" class="card card-wide reg-form" data-endpoint="{{ site.registration.script_url }}"{% unless site.registration.open %} data-preview="true"{% endunless %}>
 
   <!-- ===== Where & When ===== -->
-  <div class="reg-venue">
-    <img src="{{ '/assets/img/medinas.png' | relative_url }}" alt="Indoor soccer field at Medina's" loading="lazy">
-    <div class="reg-venue-info">
-      <p><strong data-es="Dónde">Where</strong><br><span data-es="Medina's, fútbol bajo techo en Denver, Colorado">Medina's, indoor soccer in Denver, Colorado</span></p>
-      <p><strong data-es="Cuándo">When</strong><br><span data-es="Domingos, partidos a las 5, 6, 7 u 8 pm">Sundays, games at 5, 6, 7, or 8 pm</span></p>
-      <p class="reg-hint" data-es="Te enviaremos la dirección exacta en Discord después de inscribirte.">We'll send the exact address in Discord after you register.</p>
+  <fieldset class="reg-venue">
+    <legend data-es="Dónde y cuándo">Where &amp; When</legend>
+
+    <div class="venue-photo">
+      <img src="{{ '/assets/img/medinas.png' | relative_url }}" alt="Indoor soccer field at Medina's" loading="lazy">
+      <div class="venue-photo-label">
+        <span class="venue-name">Medina's</span>
+        <span class="venue-city" data-es="Fútbol bajo techo · Denver, CO">Indoor soccer · Denver, CO</span>
+      </div>
     </div>
-  </div>
+
+    <div class="venue-cards">
+      <div class="venue-card" style="--c: #f5a9b8;">
+        <span class="venue-label" data-es="Dónde">Where</span>
+        <span class="venue-value" data-es="Medina's, Denver">Medina's, Denver</span>
+      </div>
+      <div class="venue-card" style="--c: #5bcefa;">
+        <span class="venue-label" data-es="Cuándo">When</span>
+        <span class="venue-value" data-es="Domingos">Sundays</span>
+        <div class="venue-times">
+          <span>5 pm</span><span>6 pm</span><span>7 pm</span><span>8 pm</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="venue-note" data-es="La dirección exacta se envía en Discord después de inscribirte.">Exact address sent in Discord after you register.</p>
+  </fieldset>
 
   <!-- ===== Before You Register ===== -->
   <fieldset>
