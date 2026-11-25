@@ -25,16 +25,13 @@ art_hero: ""
 
     <div class="venue-photo">
       <img src="{{ '/assets/img/medinas.png' | relative_url }}" alt="Indoor soccer field at Medina's" loading="lazy">
-      <div class="venue-photo-label">
-        <span class="venue-name">Medina's</span>
-        <span class="venue-city" data-es="Fútbol bajo techo · Denver, CO">Indoor soccer · Denver, CO</span>
-      </div>
     </div>
 
     <div class="venue-cards">
       <div class="venue-card" style="--c: #f5a9b8;">
         <span class="venue-label" data-es="Dónde">Where</span>
-        <span class="venue-value" data-es="Medina's, Denver">Medina's, Denver</span>
+        <span class="venue-value" data-es="Medina's fútbol bajo techo">Medina's Indoor Soccer</span>
+        <span class="venue-sub">Denver, CO</span>
       </div>
       <div class="venue-card" style="--c: #5bcefa;">
         <span class="venue-label" data-es="Cuándo">When</span>
@@ -55,7 +52,7 @@ art_hero: ""
     <div class="reg-q">
       <span data-es="Acuerdos de la comunidad">Community Agreements</span>
       <ol class="reg-agreements">
-        {% for a in site.data.agreements %}
+        {% for a in site.data.registration_agreements %}
         <li data-es="{{ a.text_es | default: a.text | escape }}">{{ a.text }}</li>
         {% endfor %}
       </ol>

@@ -721,24 +721,6 @@ $form-width: 880px;
   border: 2px solid rgba(255, 255, 255, 0.15);
 }
 .venue-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-// dark fade at the bottom so the text reads on the photo
-.venue-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10, 10, 15, 0.9), rgba(10, 10, 15, 0) 55%);
-}
-.venue-photo-label {
-  position: absolute;
-  left: 1.1rem;
-  bottom: 0.9rem;
-  z-index: 1;
-  display: grid;
-  gap: 0.1rem;
-}
-.venue-name { @include rainbow-text; font-size: clamp(1.6rem, 6vw, 2.2rem); font-weight: 800; line-height: 1.1; }
-.venue-city { color: $text; font-weight: 600; font-size: 0.95rem; }
-
 .venue-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 @media (max-width: $small) {
   .venue-cards { grid-template-columns: 1fr; }
@@ -756,6 +738,7 @@ $form-width: 880px;
 }
 .venue-label { color: var(--c); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
 .venue-value { font-size: 1.2rem; font-weight: 700; }
+.venue-sub { color: $muted; font-size: 0.92rem; }
 .venue-times { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.35rem; }
 .venue-times span {
   padding: 0.25rem 0.8rem;
@@ -773,3 +756,6 @@ $form-width: 880px;
   .card { padding: 1.15rem 1rem; }
   .reg-form.card { padding: 1.1rem 0.75rem; }
 }
+
+// a little more space between the community agreements on the registration form
+.reg-agreements { gap: 0.9rem; }

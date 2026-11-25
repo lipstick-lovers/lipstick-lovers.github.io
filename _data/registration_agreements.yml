@@ -1,0 +1,16 @@
+# Community Agreements (registration form only)
+# The About page still uses _data/agreements.yml
+# text_es is the Spanish version
+
+- text: "We are here to play soccer joyfully and safely and build community with one another."
+  text_es: "Estamos aquí para jugar fútbol con alegría y de forma segura, y para construir comunidad en conjunto."
+- text: "We commit to honoring Voss' memory by living out the kindness and authenticity he embodied both on and off the field."
+  text_es: "Nos comprometemos a honrar la memoria de Voss viviendo la bondad y la autenticidad que él mostraba dentro y fuera de la cancha."
+- text: "We don't slide tackle, use our arms, or body check each other. If someone seems hurt, we pause play and check in."
+  text_es: "No hacemos barridas, no usamos los brazos ni empujamos con el cuerpo. Si parece que alguien se lastimó, paramos el juego y preguntamos cómo está."
+- text: "If we're experiencing a problem, we talk directly to the people involved."
+  text_es: "Si tenemos un problema, hablamos directamente con las personas involucradas."
+- text: "We are aware of our bodies, how they affect others, and what they need."
+  text_es: "Somos conscientes de nuestros cuerpos, de cómo afectan a otras personas y de lo que necesitan."
+- text: "We are here to have fun, play soccer, look out for each other, and be queer."
+  text_es: "Estamos aquí para divertirnos, jugar fútbol, cuidarnos mutuamente y ser queer."
