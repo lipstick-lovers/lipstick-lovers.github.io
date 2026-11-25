@@ -759,3 +759,33 @@ $form-width: 880px;
 
 // a little more space between the community agreements on the registration form
 .reg-agreements { gap: 0.9rem; }
+
+// Registration community agreements: centered, big faded pride number on top of each one
+.reg-agreements {
+  list-style: none;
+  counter-reset: agree;
+  padding: 1.25rem 1rem;
+  gap: 1.4rem;
+  text-align: center;
+}
+.reg-agreements li {
+  counter-increment: agree;
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  max-width: 34rem;
+  margin: 0 auto;
+}
+.reg-agreements li::before {
+  content: counter(agree);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.45;
+  color: $red;
+}
+.reg-agreements li:nth-child(6n+2)::before { color: $orange; }
+.reg-agreements li:nth-child(6n+3)::before { color: $yellow; }
+.reg-agreements li:nth-child(6n+4)::before { color: $green; }
+.reg-agreements li:nth-child(6n+5)::before { color: $light-blue; }
+.reg-agreements li:nth-child(6n+6)::before { color: $purple; }
