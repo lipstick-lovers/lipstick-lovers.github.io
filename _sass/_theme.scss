@@ -792,3 +792,7 @@ ol.reg-agreements li:nth-child(6n+6)::before { color: $purple; }
 
 // keep gray notes full width (the "pretty" wrapping was ending lines early on phones)
 .reg-hint, .reg-media { text-wrap: wrap; }
+
+// "Questions? Email..." line above the submit button
+.reg-contact { margin: 0; text-align: center; color: $muted; font-size: 0.95rem; }
+.reg-contact a { color: $light-blue; word-break: break-all; }

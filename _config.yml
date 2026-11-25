@@ -32,7 +32,7 @@ registration:
   script_url: ""   # Google Apps Script web app URL (ends in /exec)
 
 # ----- Contact -----
-league_email: "lipsticklovers@example.com"   # shared league inbox
+league_email: "denverlipsticklovers@gmail.com"   # shared league inbox
 # Form backend for the Contact page (Formspree, FormSubmit, etc.)
 # e.g. "https://formspree.io/f/abcdwxyz"
 contact_form_action: ""

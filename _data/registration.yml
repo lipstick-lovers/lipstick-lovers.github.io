@@ -13,13 +13,13 @@ cash_note_es: "Trae el efectivo a tu primer partido."
 # Lowest to highest. "name" is what gets saved to the Sheet (always English).
 # The _es lines are what Spanish readers see.
 levels:
-  - name: "Recreational"
-    description: "New to soccer or very little experience"
-    name_es: "Recreativo"
-    description_es: "Poca o ninguna experiencia en el fútbol"
   - name: "Beginner"
-    description: "Played a little, (like pickup, casual rec, or as a kid)"
+    description: "New to soccer or very little experience"
     name_es: "Principiante"
+    description_es: "Poca o ninguna experiencia en el fútbol"
+  - name: "Recreational"
+    description: "Played a little, (like pickup, casual rec, or as a kid)"
+    name_es: "Recreativo"
     description_es: "Has jugado un poco (como partidos casuales, liga recreativa o en la infancia)"
   - name: "Intermediate"
     description: "Played regularly, like high school, club, or several seasons of adult league"
