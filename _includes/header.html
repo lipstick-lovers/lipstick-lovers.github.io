@@ -1,13 +1,15 @@
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}">
+{% comment %} Pages with hide_nav: true (the link-only forms) get no menu and a logo that doesn't link anywhere {% endcomment %}
+  {% if page.hide_nav %}<div class="brand">{% else %}<a class="brand" href="{{ '/' | relative_url }}">{% endif %}
     <span class="brand-name">{{ site.title }}</span>
     {% if site.logo != "" and site.logo %}
       <img class="logo" src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo">
     {% else %}
       <span class="logo logo-placeholder" title="Set `logo` in _config.yml">Logo</span>
     {% endif %}
-  </a>
+  {% if page.hide_nav %}</div>{% else %}</a>{% endif %}
 
+  {% unless page.hide_nav %}
   <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -17,5 +19,6 @@
       <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
     {% endfor %}
   </nav>
+  {% endunless %}
 </header>
 <div class="pride-stripe" aria-hidden="true"></div>
